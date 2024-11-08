@@ -44,7 +44,7 @@ p{
 
 
 .bottom-line{
-  @apply w-full border-0 border-b-2 border-dotted text-secondary;
+  @apply w-full border-0 border-b-2 border-dotted rounded-sm h-10 text-secondary;
 }
 
 .alimentos{

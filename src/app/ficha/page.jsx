@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import StepPersonalData from "@/components/StepPersonalData";
 import StepHistory from "@/components/StepHistory";
-//import StepHabits from "@/components/StepHabits"; // Agregar más pasos si es necesario
+import StepHabits from "@/components/StepHabits"; // Agregar más pasos si es necesario
 //import { sendDataToFirebase } from "@/utils/api"; // Lógica de envío
 
 export default function FichaNutricional() {
@@ -13,6 +13,7 @@ export default function FichaNutricional() {
 
   const onSubmit = async (data) => {
     console.log(data);
+    setFinishForm(true); //borrar luego
     /* try {
       await sendDataToFirebase(data); // Llamada al API para enviar datos
       setFinishForm(true);
@@ -27,7 +28,7 @@ export default function FichaNutricional() {
   };
 
   return (
-    <div className="h-screen bg-gradient-to-b from-secondary to-primary">
+    <div className="h-screen bg-gradient-to-b from-complementary to-secondary">
       <div className="pt-10 wrapper">
         {finishForm ? (
           <div className="text-center text-white">
