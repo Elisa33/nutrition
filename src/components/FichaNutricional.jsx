@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
 function FichaNutricional() {

@@ -1,6 +1,5 @@
 "use client";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import SplashScreen from "../components/SplashScreen";
 import Header from "../components/Header";
 import Who from "../components/Who";
