@@ -1,10 +1,11 @@
 import React from "react";
+import Link from "next/link";
 
 const Steps = () => {
   return (
     <div className="text-primary-100 wrapper flex flex-col items-center gap-10 py-20">
       <h2 className="text-complementary-300">
-        Empieza Hoy: Tu Plan de Nutrición en Cuatro Pasos
+        Tu Plan de Nutrición en Cuatro Pasos
       </h2>
       <div className="grid grid-cols-4 gap-4 text-sm py-10">
         <div className="flex flex-col gap-8 items-center">
@@ -22,7 +23,6 @@ const Steps = () => {
               d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
             />
           </svg>
-
           <p>
             Inicia completando un formulario detallado sobre tus hábitos,
             preferencias, peso actual y metas personales. Esta información será
@@ -94,9 +94,12 @@ const Steps = () => {
           </p>
         </div>
       </div>
-      <button className="bg-complementary-500 hover:bg-complementary-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105">
+      <Link
+        href="/form"
+        className="bg-complementary-500 hover:bg-complementary-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105"
+      >
         ¡Comienza hoy!
-      </button>
+      </Link>
     </div>
   );
 };
