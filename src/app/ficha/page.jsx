@@ -27,7 +27,7 @@ export default function FichaNutricional() {
   };
 
   return (
-    <div className="h-screen bg-gradient-to-b from-yellow to-primary">
+    <div className="h-screen bg-gradient-to-b from-secondary to-primary">
       <div className="pt-10 wrapper">
         {finishForm ? (
           <div className="text-center text-white">
