@@ -4,7 +4,6 @@ import { useForm, FormProvider } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
 import StepPersonalData from "@/components/StepPersonalData";
 import StepHistory from "@/components/StepHistory";
-import StepHabits from "@/components/StepHabits";
 import StepFood from "@/components/StepFood";
 import StepFruits from "@/components/StepFruits";
 import StepVegetables from "@/components/StepVegetables";

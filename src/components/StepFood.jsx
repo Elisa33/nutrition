@@ -1,7 +1,7 @@
 import { useFormContext } from "react-hook-form";
 
 export default function StepFood({ completeFormStep }) {
-  const { register, watch } = useFormContext();
+  const { register } = useFormContext();
 
   return (
     <section className="grid gap-8">

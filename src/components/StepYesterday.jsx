@@ -1,7 +1,7 @@
 import { useFormContext } from "react-hook-form";
 
-export default function StepYesterday({ completeFormStep }) {
-  const { register, watch } = useFormContext();
+export default function StepYesterday() {
+  const { register } = useFormContext();
 
   return (
     <section>

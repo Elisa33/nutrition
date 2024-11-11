@@ -1,7 +1,7 @@
 import { useFormContext } from "react-hook-form";
 
 export default function StepVegetables({ completeFormStep }) {
-  const { register, watch } = useFormContext();
+  const { register } = useFormContext();
 
   return (
     <section>
