@@ -26,22 +26,6 @@ body {
 .wrapper-wide {
   @apply px-4 md:max-w-2xl lg:max-w-4xl xl:px-0 xl:max-w-6xl 2xl:w-full 2xl:mx-10 mx-auto ;
 }
-p{
-  @apply text-sm;
-}
-h2{
-  @apply text-2xl;
-}
-h3{
-  @apply text-base;
-}
-h4{
-  @apply text-sm;
-}
-p{
-  @apply text-gray-800;
-}
-
 
 .bottom-line{
   @apply w-full border-0 border-b-2 border-dotted rounded-sm h-10 text-secondary;
@@ -55,4 +39,65 @@ p{
 }
 .hora{
   @apply w-20;
+}
+
+@layer base {
+ /*  h2{
+    @apply text-2xl;
+  }
+  h3{
+    @apply text-base;
+  }
+  h4{
+    @apply text-sm;
+  }*/
+  p{
+    @apply text-gray-800 text-sm;
+  }
+
+  h1 {
+    @apply text-5xl text-white;
+  }
+  h2 {
+    @apply pb-2 text-2xl text-secondary;
+  }
+  h3{
+    @apply text-base text-primary;
+  }
+  h4{
+    @apply text-xl text-primary;
+  }
+  input{
+    @apply block p-2 border border-gray-300 rounded bg-neutral focus:outline-none focus:border-olive;
+  }
+  input[type="number"]{
+    @apply block p-2 rounded bg-neutral focus:outline-none focus:border-olive;
+  }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+  input[type="email"]{
+    @apply block w-full p-2 border-0 border-b-2 border-dotted rounded bg-neutral focus:outline-none focus:border-olive;
+  }
+  input[type="checkbox"]{
+    @apply block p-2 border border-gray-300 rounded-full focus:outline-none focus:border-gray-300;
+  }
+  input[type="submit"]{
+    @apply block px-10 bg-white border-none rounded-lg text-primary hover:bg-primary hover:text-white;
+  }
+  label{
+    @apply text-gray-500
+  }
+  section{
+    @apply px-5 py-8 rounded-lg bg-neutral;
+  }
 }

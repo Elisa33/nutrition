@@ -16,7 +16,9 @@ export default function StepPersonalData({ completeFormStep }) {
           type="text"
           {...register("datos.nombre", { required: "Ingresa tu nombre" })}
         />
-        {errors.datos?.nombre && <span>{errors.datos.nombre.message}</span>}
+        {errors.datos?.nombre && (
+          <span className="text-accent">{errors.datos.nombre.message}</span>
+        )}
       </label>
       <label>
         Apellido *
