@@ -30,15 +30,15 @@ export default function Header() {
     <header className="relative w-full min-h-screen md:h-full xl:h-[450px] text-white flex items-center">
       <Navbar />
 
-      <picture className="relative w-full h-full block">
+      <picture className="w-full h-full block">
         <source media="(min-width: 1024px)" srcSet="/header-desktop.jpg" />
         <source media="(min-width: 768px)" srcSet="/header-tablet.jpg" />
         <Image
           src="/header-mobile.jpg"
           alt="Header background image"
           fill
-          className="object-cover top"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
+          className="object-cover"
+          // sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
           priority
         />
       </picture>

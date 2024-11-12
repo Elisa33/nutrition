@@ -36,10 +36,10 @@ const About = () => {
       ref={ref} // Asignamos la referencia al div
       className="wrapper flex gap-10 flex-col md:flex-row py-12 lg:py-20"
     >
-      <div className="relative md:w-1/3">
+      <div className="relative h-full w-full md:w-1/3">
         <Image
           src="/about.png"
-          alt="fruits and vegetables"
+          alt="mariel"
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
