@@ -52,7 +52,7 @@ body {
     @apply text-sm;
   }*/
   p{
-    @apply text-gray-800 text-sm;
+    @apply text-sm;
   }
 
   h1 {

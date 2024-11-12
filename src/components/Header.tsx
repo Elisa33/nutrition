@@ -34,49 +34,21 @@ export default function Header() {
 
   return (
     <header className="relative w-full min-h-screen md:h-full xl:h-[450px] text-white flex items-center">
-      <picture className="w-full h-full block">
+      <Navbar />
+
+      <picture className="relative w-full h-full block">
         <source media="(min-width: 1024px)" srcSet="/header-desktop.jpg" />
         <source media="(min-width: 768px)" srcSet="/header-tablet.jpg" />
         <Image
           src="/header-mobile.jpg"
           alt="Header background image"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="top"
+          fill
+          className="object-cover top"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
           priority
         />
       </picture>
       <div className="absolute inset-0 w-full wrapper-wide mx-auto z-20 h-full flex flex-col">
-        <div className="flex gap-4 items-center justify-between lg:justify-end pt-6">
-          {isMounted && (
-            <div className="flex gap-3 items-center">
-              <span
-                className="iconify"
-                data-icon="mdi:facebook"
-                data-width="24"
-                data-height="24"
-              ></span>
-              <span
-                className="iconify"
-                data-icon="mdi:twitter"
-                data-width="24"
-                data-height="24"
-              ></span>
-              <span
-                className="iconify"
-                data-icon="mdi:instagram"
-                data-width="24"
-                data-height="24"
-              ></span>
-            </div>
-          )}
-          {/* <div className="lg:hidden flex justify-end items-center p-4 text-white z-50">
-            <button id="menu-toggle" className="focus:outline-none">
-              <p>toggle</p>
-            </button>
-          </div> */}
-          <Navbar />
-        </div>
         <div className="relative gap-5 lg:gap-3 flex flex-col pt-20 items-center justify-center h-3/6 lg:h-5/6 rounded-sm text-white bg-white/70 my-20 mx-10 text-center">
           <h1 className="text-center text-4xl md:text-6xl font-bold text-primary font-lora">
             <span ref={line1Ref} className="block">

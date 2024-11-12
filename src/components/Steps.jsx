@@ -3,7 +3,10 @@ import Link from "next/link";
 
 const Steps = () => {
   return (
-    <div className="text-primary-100 wrapper flex flex-col items-center gap-10 py-12 lg:py-20">
+    <div
+      id="consultation"
+      className="text-primary-100 wrapper flex flex-col items-center gap-10 py-12 lg:py-20"
+    >
       <h2 className="text-complementary-300">
         Tu Plan de Nutrición en Cuatro Pasos
       </h2>

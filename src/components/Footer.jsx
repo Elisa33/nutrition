@@ -2,16 +2,16 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="grid lg:grid-cols-3">
-        <div className="h-20 flex flex-col items-center py-6 gap-4 bg-primary-400">
+    <footer id="contact">
+      <div className="grid lg:grid-cols-3 text-white">
+        <div className="h-20 flex items-center justify-center py-2 gap-4 bg-primary-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-6"
+            stroke="white"
+            className="size-6 text-white w-4 h-4"
           >
             <path
               strokeLinecap="round"
@@ -21,7 +21,7 @@ const Footer = () => {
           </svg>
           <p>+54 11 21589632</p>
         </div>
-        <div className="h-20 flex flex-col items-center py-6 gap-4 bg-secondary-500">
+        <div className="h-20 flex items-center justify-center py-2 gap-4 bg-secondary-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -44,7 +44,7 @@ const Footer = () => {
 
           <p>Calle 13 - 450 piso 3 depto A</p>
         </div>
-        <div className="h-20 flex flex-col items-center py-6 gap-4 bg-complementary-400">
+        <div className="h-20 flex items-center justify-center py-2 gap-4 bg-complementary-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-primary h-20 flex items-center justify-center">
-        Mariel Martinez
+        <p className="text-white-400 font-semibold text-xl">Mariel Martinez</p>
       </div>
     </footer>
   );

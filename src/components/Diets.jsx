@@ -4,7 +4,10 @@ import dietData from "@/data/dietData";
 
 const Services = () => {
   return (
-    <div className="text-primary-100 wrapper flex flex-col items-center gap-10 py-12 lg:py-20">
+    <div
+      id="diets"
+      className="text-primary-100 wrapper flex flex-col items-center gap-10 py-12 lg:py-20"
+    >
       <h2 className="text-complementary-300">Descubre las dietas</h2>
       <p>
         Cada persona es única, y tu alimentación debería reflejar esa
@@ -23,8 +26,9 @@ const Services = () => {
               <Image
                 src={diet.image}
                 alt="plato de comida"
-                layout="fill"
-                objectFit="cover"
+                fill
+                className="object-cover"
+                //sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
             <h3>{diet.title}</h3>
