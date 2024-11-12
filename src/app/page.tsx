@@ -7,7 +7,6 @@ import Steps from "../components/Steps";
 import Services from "../components/Services";
 import Diets from "../components/Diets";
 import Footer from "../components/Footer";
-import Script from "next/script";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);

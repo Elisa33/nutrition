@@ -7,12 +7,6 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
 export default function Header() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true); // Indica que el componente se ha montado en el cliente
-  }, []);
-
   const line1Ref = useRef(null);
   const line2Ref = useRef(null);
 
