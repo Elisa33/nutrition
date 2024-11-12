@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import SplashScreen from "../components/SplashScreen";
 import Header from "../components/Header";
 import Who from "../components/Who";
-import Form from "./form/page";
 import Steps from "../components/Steps";
 import Services from "../components/Services";
 import Diets from "../components/Diets";
@@ -40,7 +39,6 @@ export default function Home() {
           <Steps />
           <Services />
           <Diets />
-          <Form />
         </main>
         <Footer />
       </div>

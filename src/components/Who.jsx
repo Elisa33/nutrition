@@ -25,7 +25,7 @@ const Who = () => {
   }, []);
 
   return (
-    <div className="wrapper flex gap-10 flex-col md:flex-row py-20">
+    <div className="wrapper flex gap-10 flex-col md:flex-row py-12 lg:py-20">
       <div className="relative md:w-1/3">
         <Image
           src="/who.png"
@@ -34,7 +34,7 @@ const Who = () => {
           objectFit="cover"
         />
       </div>
-      <div className="md:w-2/3 text-secondary-100 space-y-6 py-4">
+      <div className="md:w-2/3 text-secondary-200 space-y-6 py-4">
         <h4 className="text-primary-400">TU NUTRICIONISTA</h4>
         <h2 className="text-secondary-400 font-semibold">MARIEL MARTINEZ</h2>
 

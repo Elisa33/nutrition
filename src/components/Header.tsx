@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import Navbar from "../components/Navbar";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
@@ -69,18 +70,19 @@ export default function Header() {
               ></span>
             </div>
           )}
-          <div className="lg:hidden flex justify-end items-center p-4 text-white z-50">
+          {/* <div className="lg:hidden flex justify-end items-center p-4 text-white z-50">
             <button id="menu-toggle" className="focus:outline-none">
               <p>toggle</p>
             </button>
-          </div>
+          </div> */}
+          <Navbar />
         </div>
-        <div className="relative gap-5 lg:gap-3 flex flex-col pt-20 items-center justify-center h-5/6 text-white bg-white/70 my-20 mx-10 text-center">
+        <div className="relative gap-5 lg:gap-3 flex flex-col pt-20 items-center justify-center h-3/6 lg:h-5/6 rounded-sm text-white bg-white/70 my-20 mx-10 text-center">
           <h1 className="text-center text-4xl md:text-6xl font-bold text-primary font-lora">
             <span ref={line1Ref} className="block">
               Transforma tu salud
             </span>
-            <span ref={line2Ref} className="block mt-4">
+            <span ref={line2Ref} className="block lg:mt-4">
               con inteligencia nutricional
             </span>
           </h1>
@@ -90,7 +92,7 @@ export default function Header() {
           </h3>
           <Link href="#contact" scroll={false}>
             <p className="bg-complementary px-4 py-1.5 md:mt-8 animate-bounced rounded-md uppercase">
-              <span className="text-sm">agenda tu consulta</span>
+              <span className="text-sm text-white">agenda tu consulta</span>
             </p>
           </Link>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="text-primary-100 wrapper flex flex-col items-center gap-10 py-20">
+    <div className="text-primary-100 wrapper flex flex-col items-center gap-10 py-12 lg:py-20">
       <h2 className="text-complementary-300">
         Servicios para una Nutrición Personalizada
       </h2>
@@ -13,7 +13,7 @@ const Services = () => {
         pensado para brindarte el apoyo y la guía que necesitas en tu camino
         hacia un estilo de vida saludable.
       </p>
-      <div className="grid grid-cols-3 gap-4 text-sm text-center">
+      <div className="grid lg:grid-cols-3 gap-4 text-sm text-center">
         <div className="flex flex-col gap-8 items-center bg-primary-500 px-4 py-6">
           <h3 className="text-7xl font-lora font-semibold">01</h3>
 

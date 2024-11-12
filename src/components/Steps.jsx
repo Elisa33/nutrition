@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const Steps = () => {
   return (
-    <div className="text-primary-100 wrapper flex flex-col items-center gap-10 py-20">
+    <div className="text-primary-100 wrapper flex flex-col items-center gap-10 py-12 lg:py-20">
       <h2 className="text-complementary-300">
         Tu Plan de Nutrición en Cuatro Pasos
       </h2>
-      <div className="grid grid-cols-4 gap-4 text-sm py-10">
+      <div className="grid lg:grid-cols-4 gap-4 text-sm py-10">
         <div className="flex flex-col gap-8 items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
