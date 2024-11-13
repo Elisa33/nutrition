@@ -127,6 +127,13 @@ const Navbar = () => {
             Sobre Mí
           </Link>
           <Link
+            href="#consultation"
+            className="menu-link hover:text-secondary"
+            onClick={closeMobileMenu}
+          >
+            Consulta
+          </Link>
+          <Link
             href="#services"
             className="menu-link hover:text-secondary"
             onClick={closeMobileMenu}
@@ -139,27 +146,6 @@ const Navbar = () => {
             onClick={closeMobileMenu}
           >
             Dietas
-          </Link>
-          <Link
-            href="#testimonials"
-            className="menu-link hover:text-secondary"
-            onClick={closeMobileMenu}
-          >
-            Testimonios
-          </Link>
-          <Link
-            href="#faq"
-            className="menu-link hover:text-secondary"
-            onClick={closeMobileMenu}
-          >
-            Preguntas Frecuentes
-          </Link>
-          <Link
-            href="#blog"
-            className="menu-link hover:text-secondary"
-            onClick={closeMobileMenu}
-          >
-            Blog
           </Link>
           <Link
             href="#contact"

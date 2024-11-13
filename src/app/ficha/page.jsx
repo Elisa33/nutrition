@@ -51,7 +51,7 @@ export default function FichaNutricional() {
               onSubmit={methods.handleSubmit(onSubmit)}
               className="grid gap-8 pb-12"
             >
-              <h1 className="font-bold">Ficha nutricional</h1>
+              <h2 className="text-4xl text-white">Ficha nutricional</h2>
 
               <AnimatePresence mode="wait">
                 {formStep === 1 && (
@@ -138,7 +138,7 @@ export default function FichaNutricional() {
                     <StepYesterday completeFormStep={completeFormStep} />
                     <button
                       type="submit"
-                      className="py-2 px-4 bg-secondary text-white rounded-lg mt-4"
+                      className="py-2 px-4 bg-primary w-full text-white rounded-lg mt-4"
                     >
                       Enviar
                     </button>

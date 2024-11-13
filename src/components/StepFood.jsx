@@ -4,7 +4,7 @@ export default function StepFood({ completeFormStep }) {
   const { register } = useFormContext();
 
   return (
-    <section className="grid gap-8">
+    <section className="grid  gap-4 lg:gap-8">
       <h2>Alimentos</h2>
       <p className="text-gray-500">
         A continuacion deberá marcar todo aquello que consume y que no le
@@ -13,12 +13,6 @@ export default function StepFood({ completeFormStep }) {
       <div className="grid gap-2 md:grid-cols-2">
         <div className="py-6">
           <h3>Infusiones</h3>
-          <input
-            className="invisible inp-cbx"
-            id="te"
-            type="checkbox"
-            {...register("infusiones.te")}
-          />
           <label className="cbx alimentos" htmlFor="te">
             <span>
               <svg width="12px" height="9px" viewBox="0 0 12 9">
@@ -27,6 +21,17 @@ export default function StepFood({ completeFormStep }) {
             </span>
             té
           </label>
+          <label className="cbx alimentos" htmlFor="te">
+            <div className="flex items-center gap-2">
+              <input
+                className="radio__toggle"
+                type="checkbox"
+                {...register("hc.suplementos")}
+              />
+              <span>Tes</span>
+            </div>
+          </label>
+
           <input
             className="invisible inp-cbx"
             id="cafe"
