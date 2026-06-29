@@ -1,8 +1,10 @@
 import { useFormContext } from "react-hook-form";
+import { useState } from "react";
 
-export default function StepFruits({ completeFormStep }) {
-  const { register } = useFormContext();
+export default function StepVegetables({ completeFormStep }) {
+  const { register, setValue } = useFormContext();
 
+  // Lista de vegetales
   const vegetables = [
     "albahaca",
     "alcaucil",
@@ -49,23 +51,46 @@ export default function StepFruits({ completeFormStep }) {
     "zapallito",
   ];
 
+  // Estado para controlar los vegetales seleccionados (true = consumido, false = no consumido)
+  const [selectedVegetables, setSelectedVegetables] = useState(
+    vegetables.reduce((acc, vegetable) => ({ ...acc, [vegetable]: true }), {})
+  );
+
+  const toggleVegetable = (vegetable) => {
+    const newValue = !selectedVegetables[vegetable];
+    setSelectedVegetables((prev) => ({ ...prev, [vegetable]: newValue }));
+    setValue(`vegetales.${vegetable}`, newValue); // Actualiza el valor en el formulario
+  };
+
   return (
-    <section className="grid gap-2">
-      <h2>Frutas</h2>
+    <section className="grid gap-4">
+      <h2 className="text-lg font-semibold">Vegetales</h2>
       <p className="text-gray-500">
-        Por favor, tachar aquellas que NO consuma.
+        Por favor, haga clic en los vegetales que NO consume.
       </p>
-      <ul className="grid grid-cols-2 lg:grid-cols-3 gap-5 py-5 lista frutas">
-        {/* Mapea la lista de frutas */}
+
+      <ul className="flex flex-wrap gap-4 text-center">
         {vegetables.map((vegetable) => (
-          <li key={vegetable} className="flex items-center gap-3">
+          <li
+            key={vegetable}
+            className="bg-secondary-400 px-2 py-1 rounded-full"
+          >
+            <button
+              type="button"
+              onClick={() => toggleVegetable(vegetable)}
+              className={`py-2 px-4 rounded-lg cursor-pointer ${
+                selectedVegetables[vegetable]
+                  ? "text-white"
+                  : "line-through text-gray-400"
+              }`}
+            >
+              {vegetable}
+            </button>
             <input
-              type="checkbox"
-              id={vegetable}
-              {...register(`frutas.${vegetable}`)}
-              value={vegetable}
+              type="hidden"
+              {...register(`vegetales.${vegetable}`)}
+              value={selectedVegetables[vegetable]}
             />
-            <label htmlFor={vegetable}>{vegetable}</label>
           </li>
         ))}
       </ul>
@@ -73,7 +98,7 @@ export default function StepFruits({ completeFormStep }) {
       <button
         type="button"
         onClick={completeFormStep}
-        className="py-2 px-4 bg-primary text-white rounded-lg"
+        className="py-2 px-4 bg-primary text-white rounded-lg mt-4"
       >
         Siguiente
       </button>
