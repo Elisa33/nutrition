@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import SplashScreen from "../components/SplashScreen";
 import Header from "../components/Header";
 import About from "../components/About";
@@ -9,31 +10,34 @@ import Diets from "../components/Diets";
 import Footer from "../components/Footer";
 
 export default function Home() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true); // ← ahora arranca en true!
 
-  // Simular carga
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 2500); // 2.5 segundos de splash
 
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return <SplashScreen />;
-  }
-
   return (
     <>
-      <Header />
-      <main className="bg-white">
-        <About />
-        <Steps />
-        <Services />
-        <Diets />
-      </main>
-      <Footer />
+      <AnimatePresence mode="wait">
+        {loading && <SplashScreen key="splash" />}
+      </AnimatePresence>
+
+      {!loading && (
+        <>
+          <Header />
+          <main className="bg-white">
+            <About />
+            <Steps />
+            <Services />
+            <Diets />
+          </main>
+          <Footer />
+        </>
+      )}
     </>
   );
 }

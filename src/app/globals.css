@@ -7,97 +7,52 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
-  @apply px-4 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:px-0 xl:max-w-5xl 2xl:max-w-6xl mx-auto ;
+  @apply px-4 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:px-0 xl:max-w-5xl 2xl:max-w-6xl mx-auto;
 }
 .wrapper-wide {
-  @apply px-4 md:max-w-2xl lg:max-w-4xl xl:px-0 xl:max-w-6xl 2xl:w-full 2xl:mx-10 mx-auto ;
-}
-
-.bottom-line{
-  @apply w-full border-0 border-b-2 border-dotted rounded-sm h-10 text-secondary;
-}
-
-.alimentos{
-  @apply flex items-center gap-2 capitalize;
-}
-.fruit{
-  @apply flex items-center gap-2;
-}
-.hora{
-  @apply w-20;
+  @apply px-4 md:max-w-2xl lg:max-w-4xl xl:px-0 xl:max-w-6xl 2xl:w-full 2xl:mx-10 mx-auto;
 }
 
 @layer base {
-/*   h2{
-    @apply text-2xl;
-  }
-  h3{
-    @apply text-base;
-  }
-  h4{
-    @apply text-sm;
-  } */
-  p{
+  p {
     @apply text-sm;
   }
-
   h1 {
-    @apply text-5xl text-white;
+    @apply text-4xl sm:text-5xl;
   }
   h2 {
     @apply pb-2 text-2xl text-secondary;
   }
-  h3{
+  h3 {
     @apply text-xl text-primary;
   }
-  h4{
+  h4 {
     @apply text-base text-primary;
   }
-  input{
-    @apply block p-2 border border-gray-300 rounded bg-neutral focus:outline-none focus:border-olive;
-  }
-  input[type="number"]{
-    @apply block p-2 rounded bg-neutral focus:outline-none focus:border-olive;
-  }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+  /* Remove number input spinners globally */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
 }
 
-input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
-  input[type="email"]{
-    @apply block w-full p-2 border-0 border-b-2 border-dotted rounded bg-neutral focus:outline-none focus:border-olive;
-  }
-  input[type="checkbox"]{
-    @apply block p-2 border border-gray-300 rounded-full focus:outline-none focus:border-gray-300;
-  }
-  input[type="submit"]{
-    @apply block px-10 bg-white border-none rounded-lg text-primary hover:bg-primary hover:text-white;
-  }
-  label{
-    @apply text-gray-500
-  }
-  section{
-    @apply px-5 py-8 rounded-lg bg-neutral;
+@layer utilities {
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
